@@ -1,0 +1,25 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+
+  - job_name: test-svc
+    dns_sd_configs:
+      - names:
+          - test-svc.micro.local
+        type: A
+        port: 8080
+
+  - job_name: login-svc
+    dns_sd_configs:
+      - names:
+          - login-svc.micro.local
+        type: A
+        port: 8080
+
+  - job_name: payment-svc
+    dns_sd_configs:
+      - names:
+          - payment-svc.micro.local
+        type: A
+        port: 8080
